@@ -19,6 +19,7 @@ i am not responsible for what you do with the accounts
 
 ## video showcase
 https://github.com/user-attachments/assets/9c0765e6-6191-4609-93b7-f92a5215bc91
+https://github.com/user-attachments/assets/fe4cf13a-9836-47e1-a1b9-fee59424fe87
 
 ## requirements
 - python 3.8+
