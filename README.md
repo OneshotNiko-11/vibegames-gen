@@ -33,3 +33,6 @@ https://github.com/user-attachments/assets/fe4cf13a-9836-47e1-a1b9-fee59424fe87
 5.6.7.8:1080
 9.10.11.12:1080
 ```
+
+# extra
+:star: 15 stars - auto discord verifier
