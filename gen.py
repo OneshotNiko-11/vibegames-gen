@@ -89,13 +89,14 @@ def create_account(proxies, target_accounts, accounts_created, lock, running, pr
 
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                #'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Content-Type': 'application/json',
                 'Origin': 'https://vibegames.com',
                 'Referer': 'https://vibegames.com/register',
                 'X-Requested-With': 'XMLHttpRequest'
             }
 
-            data = {
+            olddata = { # not needed anymore - feel free to remove
                 'email': email,
                 'password1': password,
                 'password2': password,
@@ -105,9 +106,18 @@ def create_account(proxies, target_accounts, accounts_created, lock, running, pr
                 'controller': 'Auth'
             }
 
-            response = session.post('https://vibegames.com/Data/DataController', 
+            data = {
+                "0": {
+                    'country': "US",
+                    'email': email,
+                    'name': "Oneshot Niko",
+                    'password': password
+                }
+            }
+
+            response = session.post('https://vibegames.com/api/trpc/register?batch=1',  # replaced from https://vibegames.com/Data/DataController (old api)
                                   headers=headers, 
-                                  data=data,
+                                  json=data, # changed from data=data to json=data
                                   timeout=15)
 
             if response.status_code == 429:
@@ -190,3 +200,4 @@ if __name__ == "__main__":
     os.makedirs("output", exist_ok=True)
     os.makedirs("data", exist_ok=True)
     main()
+
