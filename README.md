@@ -36,4 +36,5 @@ https://github.com/user-attachments/assets/fe4cf13a-9836-47e1-a1b9-fee59424fe87
 ```
 
 # extra
-:star: 10 stars - auto discord verifier
+:star: 2 stars - email verifier
+:star: 5 stars - auto discord verifier
